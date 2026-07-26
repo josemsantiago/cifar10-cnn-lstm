@@ -1,0 +1,11 @@
+# Pinned to the exact stack that produced outputs/results.json under master seed
+# 20260726. GPU kernel scheduling on Apple's Metal backend is not bit-reproducible,
+# so accuracies move by a few tenths of a point between runs; every other artifact
+# (splits, architectures, parameter counts, tables) is fixed.
+torch==2.8.0
+torchvision==0.15.2
+scikit-learn==1.0.2
+numpy==1.26.4
+pandas==1.4.0
+matplotlib==3.5.1
+scipy==1.10.1

@@ -1,0 +1,30 @@
+Dataset: CIFAR-10 (Canadian Institute for Advanced Research, 10 classes)
+Original source: https://www.cs.toronto.edu/~kriz/cifar.html
+Reference: Krizhevsky, A. (2009). Learning multiple layers of features from tiny
+           images [Technical report]. University of Toronto.
+File: cifar-10-python.tar.gz  (170,498,071 bytes; MD5 c58f30108f718f92721af3b95e74349a)
+Retrieved: https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+Retrieved on: 2026-07-26
+
+Contents (extracted to data/cifar-10-batches-py/ on first run by src/data.py):
+  data_batch_1 .. data_batch_5   50,000 training images, 5,000 per class
+  test_batch                     10,000 test images,     1,000 per class
+  batches.meta                   the ten class names
+
+Images: 32 x 32 RGB, uint8, no missing values.
+Classes: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck.
+
+Integrity check (asserted in src/data.py on every run): training array shape
+(50000, 32, 32, 3) and dtype uint8 with values spanning 0-255; exactly 5,000
+training and 1,000 test images per class; and per-channel training means/standard
+deviations of (0.4914, 0.4822, 0.4465) / (0.2470, 0.2435, 0.2616), recomputed from
+the raw pixels rather than trusted from the configuration file. The archive's MD5
+is verified against Krizhevsky's published checksum before extraction.
+
+Partitioning: the official 10,000-image test split is held out untouched and scored
+once per model. A stratified 5,000-image validation split (500 per class) is drawn
+from the 50,000 official training images under master seed 20260726, leaving 45,000
+for training. Model selection uses validation accuracy only.
+
+License/terms: CIFAR-10 is distributed for research use from the University of
+Toronto page above; the collection derives from the 80 Million Tiny Images dataset.

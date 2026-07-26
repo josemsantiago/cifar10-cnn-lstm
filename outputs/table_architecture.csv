@@ -1,0 +1,4 @@
+stage,output_shape,parameters
+trunk,128 x 8 x 8,1179328
+lstm,8 x 512,2625536
+head,10,5130

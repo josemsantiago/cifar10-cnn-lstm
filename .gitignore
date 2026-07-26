@@ -1,0 +1,47 @@
+# ---------------------------------------------------------------------------
+# OS / editor cruft
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# Virtual environments
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# ---------------------------------------------------------------------------
+# Data: CIFAR-10 is a 170 MB public archive, refetched by data/SOURCE.txt rather
+# than tracked. Only the provenance record belongs in the repository.
+# ---------------------------------------------------------------------------
+data/*.tar.gz
+data/cifar-10-batches-py/
+
+# ---------------------------------------------------------------------------
+# Report and any report-like component — kept private, never shared.
+# The full written report, its Markdown source, process logs, build scripts,
+# and downloaded reference PDFs are all excluded. Only the code and the
+# run artifacts (figures, outputs) are tracked.
+# ---------------------------------------------------------------------------
+report/
+downloads/
+*.docx
+*.pdf
